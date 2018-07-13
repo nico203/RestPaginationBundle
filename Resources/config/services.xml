@@ -13,7 +13,7 @@
             <argument>%parameter_name%</argument>
         </service>
         -->
-        <service id="rest_paginator.example" class="Rest\PaginatorBundle\Event\EventListener\ViewListener">
+        <service id="rest_paginator.view" class="Rest\PaginatorBundle\Event\EventListener\ViewListener">
             <argument type="service" id="knp_paginator" />
             <argument></argument>
             <tag name="kernel.event_listener" event="kernel.view" priority="31" />

@@ -33,7 +33,9 @@ class ViewListener
         }
         
         $pagination = $this->paginator->paginate(
-            $data, $request->query->getInt('page', 1), $this->itemsPaginacion
+            $data, 
+            $request->query->getInt('page', 1), 
+            ($paginate->getPageRange()) ? $paginate->getPageRange() : $this->itemsPaginacion
         );
         
         $event->setControllerResult(array(

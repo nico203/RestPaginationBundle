@@ -24,5 +24,8 @@ class RestPaginatorExtension extends Extension
         
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+        
+        $container->getDefinition('rest_paginator.view')
+                ->replaceArgument(1, $config['page_range']);
     }
 }

@@ -1,0 +1,24 @@
+{
+    "name": "nico203/rest-paginator-bundle",
+    "description":"A bundle to use the knp-paginator on rest applications",
+    "type": "symfony-bundle",
+    "keywords": ["rest","pager", "paginator", "pagination", "symfony", "bundle"],
+    "homepage": "https://github.com/nico203/RestPaginatorBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Schimpf",
+            "email": "nicolasschimpf@outlook.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rest\\PaginatorBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "^2.7|^3.0|^4.0",
+        "knplabs/knp-paginator-bundle": "^2.6"
+    }
+}

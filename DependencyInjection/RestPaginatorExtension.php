@@ -26,6 +26,6 @@ class RestPaginatorExtension extends Extension
         $loader->load('services.xml');
         
         $container->getDefinition('rest_paginator.view')
-                ->replaceArgument(1, $config['page_range']);
+                ->replaceArgument(0, $config['page_range']);
     }
 }

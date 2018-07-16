@@ -5,6 +5,7 @@ namespace Rest\PaginatorBundle\Event\EventListener;
 use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
 use Doctrine\ORM\Query;
 use Rest\PaginatorBundle\Annotations\Paginate;
+use Knp\Component\Pager\Paginator;
 
 class ViewListener
 {
@@ -12,9 +13,9 @@ class ViewListener
     private $itemsPaginacion;
 
 
-    public function __construct($paginator, $itemsPaginacion)
+    public function __construct($itemsPaginacion)
     {
-        $this->paginator = $paginator;
+        $this->paginator = new Paginator();
         $this->itemsPaginacion = $itemsPaginacion;
     }
     
